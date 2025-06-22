@@ -1,26 +1,45 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
+import PkindexView from '../views/pk/PkindexView.vue'
+import RecordindexView from '../views/record/RecordindexView.vue'
+import RanklistindexView from '../views/ranklist/RanklistindexView.vue'
+import UserBotindexView from '../views/user/bot/UserBotindexView.vue'
+import Notfound from '../views/error/NotfoundView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    redirect: '/pk/'
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/pk/',
+    name: 'pkindex',
+    component: PkindexView
+  },{
+    path: '/record/',
+    name: 'recordindex',
+    component: RecordindexView
+  },{
+    path: '/ranklist/',
+    name: 'ranklistindex',
+    component: RanklistindexView
+  },{
+    path: '/user/bot/',
+    name: 'userbotindex',
+    component: UserBotindexView
+  },{
+    path: '/404/',
+    name: '404',
+    component: Notfound
+  },{
+    path: '/:catchAll(.*)',
+    name: 'notfound',
+    component: Notfound
   }
 ]
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHistory(),
   routes
 })
 
