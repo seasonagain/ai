@@ -1,132 +1,132 @@
-# AI 对战平台
+# AI Battle Platform
 
-这是一个基于多技术栈的AI对战游戏平台项目，包含前端展示、后端服务和AI模块三个主要部分。
+This is a multi-technology stack AI battle game platform project that includes frontend display, backend services, and AI modules.
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 ai/
-├── app/                    # Vue 3 + Vite 演示应用
+├── app/                    # Vue 3 + Vite Demo Application
 │   ├── src/
-│   │   ├── App.vue        # 主应用组件
-│   │   ├── main.js        # 应用入口文件
-│   │   └── components/    # Vue组件目录
-│   ├── package.json       # 项目依赖配置
-│   └── vite.config.js     # Vite构建配置
+│   │   ├── App.vue        # Main application component
+│   │   ├── main.js        # Application entry point
+│   │   └── components/    # Vue components directory
+│   ├── package.json       # Project dependencies configuration
+│   └── vite.config.js     # Vite build configuration
 │
-├── backend/               # Spring Boot 后端服务
+├── backend/               # Spring Boot Backend Service
 │   ├── src/main/java/com/ai/backend/
-│   │   ├── BackendApplication.java    # Spring Boot启动类
+│   │   ├── BackendApplication.java    # Spring Boot startup class
 │   │   └── controller/
-│   │       └── pk/                    # PK对战相关控制器
-│   │           ├── BotInfoController.java  # AI机器人信息接口
-│   │           └── IndexController.java    # 页面路由控制器
-│   ├── pom.xml           # Maven项目配置
+│   │       └── pk/                    # PK battle related controllers
+│   │           ├── BotInfoController.java  # AI bot information API
+│   │           └── IndexController.java    # Page routing controller
+│   ├── pom.xml           # Maven project configuration
 │   └── src/main/resources/
-│       ├── application.properties     # 应用配置文件
-│       └── templates/                 # Thymeleaf模板文件
+│       ├── application.properties     # Application configuration
+│       └── templates/                 # Thymeleaf template files
 │
-└── web/                   # Vue 3 + CLI 主前端应用
+└── web/                   # Vue 3 + CLI Main Frontend Application
     ├── src/
-    │   ├── App.vue        # 主应用组件
-    │   ├── main.js        # 应用入口
-    │   ├── router/        # Vue Router路由配置
-    │   ├── store/         # Vuex状态管理
-    │   ├── views/         # 页面视图组件
-    │   │   ├── HomeView.vue           # 首页
-    │   │   ├── AboutView.vue          # 关于页面
-    │   │   └── error/                 # 错误页面
-    │   └── components/    # 可复用组件
-    └── package.json       # 项目依赖配置
+    │   ├── App.vue        # Main application component
+    │   ├── main.js        # Application entry point
+    │   ├── router/        # Vue Router configuration
+    │   ├── store/         # Vuex state management
+    │   ├── views/         # Page view components
+    │   │   ├── HomeView.vue           # Home page
+    │   │   ├── AboutView.vue          # About page
+    │   │   └── error/                 # Error pages
+    │   └── components/    # Reusable components
+    └── package.json       # Project dependencies configuration
 ```
 
-## 🛠️ 技术栈
+## 🛠️ Technology Stack
 
-### 前端技术
-- **app模块**: Vue 3 + Vite (现代化构建工具)
-- **web模块**: Vue 3 + Vue CLI + Vue Router + Vuex
-- **UI框架**: Bootstrap 5 + jQuery
-- **开发工具**: ESLint代码规范检查
+### Frontend Technologies
+- **app module**: Vue 3 + Vite (Modern build tool)
+- **web module**: Vue 3 + Vue CLI + Vue Router + Vuex
+- **UI Framework**: Bootstrap 5 + jQuery
+- **Development Tools**: ESLint code linting
 
-### 后端技术
-- **框架**: Spring Boot 2.7.1
-- **模板引擎**: Thymeleaf
-- **构建工具**: Maven
-- **Java版本**: JDK 8
+### Backend Technologies
+- **Framework**: Spring Boot 2.7.1
+- **Template Engine**: Thymeleaf
+- **Build Tool**: Maven
+- **Java Version**: JDK 8
 
-## 🚀 模块功能
+## 🚀 Module Features
 
-### app 模块
-- 基础的Vue 3演示应用
-- 使用Vite作为构建工具，提供快速的开发体验
-- 包含基础的Vue组件示例
+### app Module
+- Basic Vue 3 demo application
+- Uses Vite as build tool for fast development experience
+- Contains basic Vue component examples
 
-### backend 模块
-- 提供RESTful API服务
-- 包含PK对战相关的后端逻辑
-- AI机器人信息管理
-- 使用Thymeleaf渲染前端页面
+### backend Module
+- Provides RESTful API services
+- Contains PK battle related backend logic
+- AI bot information management
+- Uses Thymeleaf for frontend page rendering
 
-### web 模块
-- 主要的前端用户界面
-- 完整的单页应用(SPA)架构
-- 包含路由管理和状态管理
-- 响应式设计，支持多设备访问
+### web Module
+- Main frontend user interface
+- Complete Single Page Application (SPA) architecture
+- Includes routing management and state management
+- Responsive design supporting multiple devices
 
-## 📦 快速开始
+## 📦 Quick Start
 
-### 前端应用启动
+### Frontend Application Setup
 
-**启动app模块：**
+**Start app module:**
 ```bash
 cd app
 npm install
 npm run dev
 ```
 
-**启动web模块：**
+**Start web module:**
 ```bash
 cd web
 npm install
 npm run serve
 ```
 
-### 后端服务启动
+### Backend Service Setup
 
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
 
-或者使用Maven：
+Or using Maven:
 ```bash
 cd backend
 mvn spring-boot:run
 ```
 
-## 🔧 开发说明
+## 🔧 Development Notes
 
-1. **端口配置**：
-   - app模块默认运行在Vite默认端口
-   - web模块默认运行在Vue CLI默认端口
-   - backend模块默认运行在8080端口
+1. **Port Configuration**:
+   - app module runs on Vite default port
+   - web module runs on Vue CLI default port
+   - backend module runs on port 8080
 
-2. **API接口**：
-   - 后端提供`/pk/getbotinfo/`接口获取机器人信息
-   - 使用Spring Boot的自动配置特性
+2. **API Endpoints**:
+   - Backend provides `/pk/getbotinfo/` endpoint for bot information
+   - Uses Spring Boot auto-configuration features
 
-3. **构建部署**：
-   - 前端应用可通过`npm run build`进行生产构建
-   - 后端应用可通过Maven打包为可执行JAR文件
+3. **Build & Deploy**:
+   - Frontend applications can be built for production using `npm run build`
+   - Backend application can be packaged as executable JAR file via Maven
 
-## 📋 待开发功能
+## 📋 Upcoming Features
 
-- [ ] 完善AI对战逻辑
-- [ ] 添加用户认证系统
-- [ ] 实现实时对战功能
-- [ ] 添加排行榜功能
-- [ ] 完善游戏记录功能
+- [ ] Complete AI battle logic
+- [ ] Add user authentication system
+- [ ] Implement real-time battle functionality
+- [ ] Add leaderboard feature
+- [ ] Complete game record functionality
 
 ---
 
-> 这是一个正在开发中的AI对战平台项目，旨在提供一个完整的AI游戏对战解决方案。
+> This is an AI battle platform project under development, aiming to provide a complete AI game battle solution.
