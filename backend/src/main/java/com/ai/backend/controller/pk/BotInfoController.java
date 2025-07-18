@@ -12,6 +12,6 @@ public class BotInfoController {
     @RequestMapping("getbotinfo/")
     public Map<String,String> getBotInfo() {
         Map<String, String> bot1 = new HashMap<>();
-
+        return null;
     }
 }
